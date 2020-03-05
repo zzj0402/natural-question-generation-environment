@@ -396,7 +396,7 @@ def save(passage, answer, question):
 def main(unused_argv):
     with open(FLAGS.nq_jsonl) as fileobj:
         examples = load_examples(fileobj)
-    with open('data.json', 'w') as outfile:
+    with open('./data/data.json', 'w') as outfile:
         json.dump(data, outfile)
     # save("Test passage", "Test answer", "Test question")
     # NqServer(web_path, examples).serve()

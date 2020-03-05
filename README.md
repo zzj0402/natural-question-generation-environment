@@ -21,5 +21,5 @@ In the host machine, mount dataset and run the image:
 With Python 2, run:
 
 ```python2
-python prepare-dataset.py --nq_jsonl=data/v1.0/sample/nq-train-sample.jsonl --dataset=train --gzipped=true
+python prepare-dataset.py --nq_jsonl=data/v1.0/sample/nq-train-sample.jsonl.gz --dataset=train --gzipped=true
 ```
