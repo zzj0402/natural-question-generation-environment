@@ -390,13 +390,16 @@ def save(passage, answer, question):
     datum['answer'] = answer
     datum['question'] = question
     global data
+    print("Processing "+question)
     data['entries'].append(datum)
 
 
 def main(unused_argv):
+    fileName = FLAGS.nq_jsonl.partition(".")[2].partition(
+        '/')[2].partition('/')[2].partition(".")[0]
     with open(FLAGS.nq_jsonl) as fileobj:
         examples = load_examples(fileobj)
-    with open('./data/data.json', 'w') as outfile:
+    with open('./data/qgdata/'+fileName+'.json', 'w') as outfile:
         json.dump(data, outfile)
     # save("Test passage", "Test answer", "Test question")
     # NqServer(web_path, examples).serve()

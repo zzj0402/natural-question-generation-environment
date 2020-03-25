@@ -22,3 +22,4 @@ RUN apt-get install -y vim htop
 WORKDIR /root/
 
 COPY ./prepare-dataset.py /root/
+RUN mkdir /root/data/qgdata
