@@ -23,3 +23,4 @@ WORKDIR /root/
 
 COPY ./prepare-dataset.py /root/
 RUN mkdir /root/data/qgdata
+COPY ./prepare-data.sh /root/
