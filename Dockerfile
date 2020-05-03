@@ -12,3 +12,4 @@ WORKDIR /root/
 RUN pip install install-jdk
 RUN python -m install-jdk jdk.install('12')
 RUN pip install git+https://github.com/Maluuba/nlg-eval.git@master
+RUN nlg-eval --setup
