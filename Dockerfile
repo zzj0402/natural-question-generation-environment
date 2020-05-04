@@ -10,6 +10,6 @@ WORKDIR /root/
 
 # Setup Evaluation Script
 RUN pip install install-jdk
-RUN python -m install-jdk jdk.install('12')
+COPY ./jdk.py .
+RUN python jdk.py
 RUN pip install git+https://github.com/Maluuba/nlg-eval.git@master
-RUN nlg-eval --setup
